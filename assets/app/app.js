@@ -45,7 +45,7 @@ app.controller('thermostatController', function($scope, $http, $interval, $locat
   $scope.tstat = {};
   $scope.blower = {};
 
-  var $wsUrl = "ws://" + $location.host() + ":" + $location.port() + "/api/ws";
+  var $wsUrl = "wss://" + $location.host() + ":" + $location.port() + "/api/ws";
 
   thermostatEvents.start($wsUrl, function (msg) {
     if (msg.source == "tstat") {
